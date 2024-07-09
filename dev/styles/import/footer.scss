@@ -1,0 +1,74 @@
+.footer {
+  margin-top: 5rem;
+  padding-top: 3rem;
+  padding-bottom: 6rem;
+  background: #363d45;
+  @media (max-width: $breakpoint-tablet) {
+    padding: 2rem 0;
+    margin-top: 3rem;
+  }
+
+  &__inner {
+    display: flex;
+    align-items: flex-start;
+    gap: 3.2rem;
+    justify-content: space-between;
+    @media (max-width: $breakpoint-tablet) {
+      flex-wrap: wrap;
+    }
+    @media (max-width: $breakpoint-mobile) {
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+  }
+  &__title {
+    font-weight: 500;
+    font-size: 1.2rem;
+    color: #fff;
+    margin-bottom: 1.5rem;
+  }
+  &__contacts {
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 104%;
+    text-transform: uppercase;
+    margin-top: 1.5rem;
+    color: #fff;
+    a {
+      display: flex;
+      gap: 1rem;
+    }
+  }
+}
+.socials {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  a {
+    @include wh(40px);
+    border-radius: 50%;
+    background: url(../img/social2.png) -4px -4px / 548px 148px no-repeat;
+    @include tr;
+    &.vk {
+    }
+    &.twitter {
+      background-position: -104px -4px;
+    }
+    &.telegram {
+      background-position: -4px -104px;
+    }
+    &.ytb {
+      background-position: -204px -4px;
+    }
+    &.odn {
+      background-position: -254px -4px;
+    }
+    &.mail {
+      background-position: -4px -54px;
+    }
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}

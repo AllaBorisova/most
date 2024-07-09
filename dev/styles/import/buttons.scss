@@ -1,0 +1,53 @@
+.button {
+  cursor: pointer;
+  white-space: nowrap;
+  border: none;
+  text-decoration: none;
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  padding: 0rem 3.4rem;
+  height: 4.1rem;
+  font-weight: 400;
+  font-size: 1.2rem;
+  color: #fff;
+  @include tr;
+  background: $color-primary;
+  border-radius: 0.2rem;
+  text-decoration: none;
+  svg {
+    max-width: 2.5rem;
+    @include tr;
+  }
+  @media (max-width: $breakpoint-mobile) {
+    // font-size: 1.8rem;
+  }
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &_full {
+    width: 100%;
+    max-width: 100%;
+  }
+  &_white {
+    background: #fff;
+    color: $color-primary;
+  }
+
+  &-bordered {
+    background: none;
+    justify-content: center;
+    color: $color-primary;
+    border: 1px solid $color-primary;
+    text-decoration: none;
+    &:hover {
+      background: $color-primary;
+      color: #fff;
+    }
+    @media (max-width: $breakpoint-mobile) {
+      min-width: auto;
+    }
+  }
+}
